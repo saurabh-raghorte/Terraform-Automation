@@ -1,6 +1,6 @@
 variable "aws_region" {
        description = "The AWS region to create things in." 
-       default     = "ap-south-1" 
+       default     = "us-east-1" 
 }
 
 variable "key_name" { 
@@ -10,7 +10,7 @@ variable "key_name" {
 
 variable "instance_type" { 
     description = "instance type for ec2" 
-    default     =  "t2.micro" 
+    default     =  "t2.medium" 
 }
 
 variable "security_group" { 
@@ -24,7 +24,7 @@ variable "tag_name" {
 } 
 variable "ami_id" { 
     description = "AMI for Ubuntu Ec2 instance" 
-    default     = "ami-07ffb2f4d65357b42" 
+    default     = "ami-0f65bb365cb678b05" 
 }
 variable "versioning" {
     type        = bool
@@ -39,7 +39,7 @@ variable "acl" {
 variable "bucket_prefix" {
     type        = string
     description = "(required since we are not using 'bucket') Creates a unique bucket name beginning with the specified prefix"
-    default     = "my-s3bucket-"
+    default     = "project-111222"
 }
 variable "tags" {
     type        = map
